@@ -1,262 +1,146 @@
-InvestShiksha
+# 💼 Invest Suraksha
+
+*Smartly manage your investments & secure your financial future.* 🚀
+
+---
+
+![Frontend: React](https://img.shields.io/badge/Frontend-React-blue?style=flat-square)  
+![Backend: Node.js](https://img.shields.io/badge/Backend-Node.js-green?style=flat-square)  
+![Database: MongoDB](https://img.shields.io/badge/Database-MongoDB-lightgreen?style=flat-square)  
+![Container: Docker](https://img.shields.io/badge/Container-Docker-blue?style=flat-square)
+
+---
+
+## 📖 Table of Contents
+1. [About](#about)  
+2. [Key Features](#key-features)  
+3. [Tech Stack](#tech-stack)  
+4. [Project Structure](#project-structure)  
+5. [Prerequisites](#prerequisites)  
+6. [Installation & Setup](#installation--setup)  
+7. [Usage](#usage)  
+8. [Screenshots](#screenshots)  
+9. [Contributing](#contributing)  
+10. [License](#license)  
+11. [Author](#author)
+
+---
+
+## 🌟 About
+**Invest Suraksha** is a full-stack financial management platform designed to help users track, analyze, and optimize their investments effortlessly. Featuring a modern, responsive UI and scalable backend, it delivers a seamless experience for both end-users and developers.
+
+---
+
+## 🚀 Key Features
+- **Interactive Dashboard**  
+  Visualize real-time portfolio performance with charts and summaries.
+- **Secure Authentication**  
+  JWT-based signup/login, password hashing, and session management.
+- **Performance Optimized**  
+  Fast API endpoints and lazy-loaded frontend components.
+- **One-Click Deployment**  
+  Dockerized services orchestrated via `docker-compose`.
+- **Modular Architecture**  
+  Clean separation between frontend and backend for maintainability.
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend**  
+- React.js / Next.js  
+- Tailwind CSS / Material-UI  
+
+**Backend**  
+- Node.js / Express  
+- MongoDB / PostgreSQL  
+- JWT Authentication  
+
+**DevOps & Tools**  
+- Docker & Docker Compose  
+- RESTful APIs  
+- Git & GitHub  
+
+---
+
+## 📂 Project Structure
+```
+Invest_Suraksha/
+├── backend/           # REST API, business logic
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── server.js
+├── frontend/          # React or Next.js application
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   └── index.js
+├── .env.example       # Sample environment variables
+├── docker-compose.yml # Docker orchestration
+└── README.md          # Project documentation
+```
+
+---
+
+## 🔧 Prerequisites
+- Node.js v14+  
+- Docker & Docker Compose (optional but recommended)  
+- Git  
+
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/dileep-chouhan/Invest_Suraksha.git
+   cd Invest_Suraksha
+   ```
+
+2. **Configure Environment Variables**  
+   ```bash
+   cp .env.example .env
+   ```  
+   Update `.env` with your database credentials and JWT secrets.
 
-InvestShiksha is a cross-platform mobile application that educates and empowers retail investors in India. It provides interactive tutorials, quizzes, virtual trading, AI-driven risk assessment, and multilingual support aligned with SEBI’s investor education mandate.
+3. **Run with Docker (Recommended)**  
+   ```bash
+   docker-compose up --build
+   ```
 
+4. **Run Locally without Docker**  
+   - **Backend**  
+     ```bash
+     cd backend
+     npm install
+     npm run dev
+     ```
+   - **Frontend**  
+     ```bash
+     cd frontend
+     npm install
+     npm start
+     ```
 
+---
 
-Key Features
+## ▶️ Usage
+- Open your browser at `http://localhost:3000` to access the dashboard.  
+- Use the signup form to create an account and start adding your investments.  
+- Explore detailed analytics and export reports as CSV or PDF.
 
-Investor Education: Comprehensive courses on stock market fundamentals, risk management, algo trading, and portfolio diversification.
+---
 
 
+## 🤝 Contributing
+Contributions are welcome! Please fork the repo and open a pull request with your changes.
 
-Multilingual Support: Real-time translation into 12+ Indian vernacular languages.
 
 
+---
 
-Interactive Quizzes: End-of-lesson quizzes with instant feedback and progress tracking.
 
-
-
-Virtual Trading Simulator: Risk-free trading environment using delayed market data.
-
-
-
-AI-Powered Insights: Personalized risk assessments and investment recommendations using OpenAI GPT-3.5.
-
-
-
-Gamification: Points, levels, and achievements to motivate continuous learning.
-
-
-
-Secure Authentication: Email/password, JWT, and optional biometric login.
-
-
-
-Real-Time Updates: Live market data via Socket.io.
-
-
-
-Tech Stack
-
-Frontend: React Native, Expo, TypeScript
-
-
-
-Backend: Node.js, Express, TypeScript, MongoDB, Redis
-
-
-
-AI/ML: OpenAI GPT-3.5, TensorFlow.js
-
-
-
-Real-Time: Socket.io
-
-
-
-Translation: Google Translate API
-
-
-
-Notifications: Firebase Cloud Messaging
-
-
-
-Deployment: Docker, Docker Compose, AWS/GCP
-
-
-
-Prerequisites
-
-Node.js v18+
-
-
-
-npm or yarn
-
-
-
-Docker \& Docker Compose (optional)
-
-
-
-API keys for Google Translate, Alpha Vantage (market data), and OpenAI
-
-
-
-Project Structure
-
-text
-
-InvestShiksha/
-
-├── backend/      # Express API server
-
-├── frontend/     # React Native mobile app
-
-├── docker-compose.yml
-
-├── README.md
-
-└── .env.example
-
-Setup Instructions
-
-1\. Clone Repository
-
-bash
-
-git clone https://github.com/your-org/investshiksha.git
-
-cd investshiksha
-
-2\. Backend Setup
-
-bash
-
-cd backend
-
-cp .env.example .env
-
-\# Edit .env with your API keys and database URIs
-
-npm install
-
-npm run dev
-
-The backend API will run at http://localhost:3000/api.
-
-
-
-3\. Frontend Setup
-
-bash
-
-cd frontend
-
-npm install
-
-npx expo start
-
-Use an Android emulator (10.0.2.2) or iOS simulator.
-
-
-
-4\. Docker Setup (Optional)
-
-bash
-
-docker-compose up --build
-
-This will start:
-
-
-
-backend (port 3000)
-
-
-
-mongo (port 27017)
-
-
-
-redis (port 6379)
-
-
-
-5\. Database Seeding
-
-bash
-
-cd backend
-
-npm run seed
-
-Usage
-
-Register or login using email/password (or biometric).
-
-
-
-Select preferred language.
-
-
-
-Browse courses and complete lessons.
-
-
-
-Take quizzes and track your learning progress.
-
-
-
-Use the virtual trading simulator to practice buying/selling stocks.
-
-
-
-View real-time market data and portfolio performance.
-
-
-
-Environment Variables (.env)
-
-text
-
-\# Server
-
-PORT=3000
-
-MONGO\_URI=mongodb://mongo:27017/investshiksha
-
-REDIS\_URL=redis://redis:6379
-
-JWT\_SECRET=your\_jwt\_secret
-
-ENCRYPTION\_KEY=32\_char\_hex\_key
-
-
-
-\# Firebase (Notifications)
-
-FIREBASE\_API\_KEY=
-
-FIREBASE\_AUTH\_DOMAIN=
-
-FIREBASE\_PROJECT\_ID=
-
-
-
-\# External APIs
-
-GOOGLE\_TRANSLATE\_API\_KEY=
-
-ALPHA\_VANTAGE\_API\_KEY=
-
-OPENAI\_API\_KEY=
-
-Contributing
-
-Fork the repository
-
-
-
-Create a branch: git checkout -b feature/YourFeature
-
-
-
-Commit changes: git commit -m "Add YourFeature"
-
-
-
-Push branch: git push origin feature/YourFeature
-
-
-
-Open a pull request
-
-
-
-
+---
 
