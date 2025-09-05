@@ -1,0 +1,42 @@
+{
+    "expo": {
+      "name": "InvestShiksha",
+      "slug": "investshiksha",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/icon.png",
+      "userInterfaceStyle": "light",
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#667eea"
+      },
+      "assetBundlePatterns": [
+        "**/*"
+      ],
+      "ios": {
+        "supportsTablet": true,
+        "bundleIdentifier": "com.investshiksha.app"
+      },
+      "android": {
+        "adaptiveIcon": {
+          "foregroundImage": "./assets/adaptive-icon.png",
+          "backgroundColor": "#667eea"
+        },
+        "package": "com.investshiksha.app",
+        "permissions": [
+          "CAMERA",
+          "USE_BIOMETRIC",
+          "USE_FINGERPRINT",
+          "RECEIVE_BOOT_COMPLETED"
+        ]
+      },
+      "web": {
+        "favicon": "./assets/favicon.png"
+      },
+      "plugins": [
+        "expo-local-authentication"
+      ]
+    }
+  }
+  
